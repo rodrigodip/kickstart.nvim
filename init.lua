@@ -501,7 +501,7 @@ require('lazy').setup({
       -- and language tooling communicate in a standardized fashion.
       --
       -- In general, you have a "server" which is some tool built to understand a particular
-      -- language (such as `gopls`, `lua_ls`, `rust_analyzer`, etc.). These Language Servers
+      -- language (such as `gspawn: go failed with exit code - and signal -. Could not find executable "go" in PATH.opls`, `lua_ls`, `rust_analyzer`, etc.). These Language Servers
       -- (sometimes called LSP servers, but that's kind of like ATM Machine) are standalone
       -- processes that communicate with some "client" - in this case, Neovim!
       --
@@ -672,7 +672,7 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         -- clangd = {},
-        -- gopls = {},
+        gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -976,8 +976,8 @@ require('lazy').setup({
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
